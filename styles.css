@@ -1,0 +1,182 @@
+margin:0;
+/* rule to ensure it calculates dimention to the browser corretly */
+html,
+body{
+    height:100%;
+}
+
+/* stles for the body */
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background-color:powderblue;
+}
+/* add top,left.botto.right to each of the paragraph margin */
+p{
+    margin:0.5cm 0 0.5cm 0;
+}
+header{
+    display:block;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background-color:pink;
+    padding:10px;
+}
+
+nav a:visited,
+nav a:link{
+    color:black;
+    /* text decoration removes the lines on the links */
+    text-decoration: none;
+}
+
+nav>ul>li{
+    /* display inline block stacks the elements next to each other */
+    display:inline-block;
+   /* tells browser to ignore elements aslists */
+   list-style:none;
+   /* gives space between elements */
+   margin:0 5px 0 10px;
+}
+/* h1{ */
+    /* text-align:center; */
+    /* font-size:x-large */
+
+ h1{ 
+     font-style:italic; 
+     color:black; 
+     font-weight:normal;
+ } 
+ /* id selector */
+/* #heading{
+    font:message-box;
+    text-shadow: teal; */
+}
+main{
+    display:block;
+    background-image:url("images/Back.jpg.jpg");
+    padding-top:3em ;
+    padding-bottom:3em;
+    min-height:85px;
+}
+footer{
+    padding: 10px;
+    width:100%;
+    bottom:0;
+}
+aside,
+article{
+    padding:2em;
+}
+aside{
+    /* to align an image or text use the below rule */
+    text-align:left;
+}
+article{
+    width:75%;
+}
+
+/* desktop users styles */
+@media only screen and (main-width:768px){
+    main{
+        diplay:flex;
+    }
+    aside{
+        margin-left:2%;
+    }
+    
+}
+
+/* styles for Cupcake Menu.html */
+.flavours{
+    text-align: center;
+}
+
+.cupcakes{
+    display:inline-block;
+    width:300px;
+    padding:10px;
+    margin:10px;
+    background-color:blanchedalmond;
+    border:solid 2px white;
+    font-size:1em;
+
+}
+/* make img occupy 100% of width available inside the container*/
+ .cupcakes img{ 
+    width:100%; 
+ } 
+ .cupcakes .choco{
+     font-weight:bold;
+ }
+/* make the element that holds the columns take max space so as for columns to spread out a little bit */
+.cupcakes .yellow{
+    width:100%
+}
+/* the above order helps for the below step to occur  */
+.cupcakes .prices{
+    text-align:right;
+}
+.cupcakes.yellow div{
+    width:50%;
+}
+.cupcakes button{
+     background-color:indianred; 
+    padding:10px;
+    border:solid 2px:brown;
+    color:ivory;
+}
+.cupcakes .choco{
+    font-style:italic;
+}
+/* contact styles */
+
+
+/* example
+input[type="email]{
+    background-color:purple;
+    color:white;
+} 
+OR
+input[type="email], select{
+    background-color:purple;
+    color:white;
+} 
+    */
+
+    fieldset{
+        border-color: antiquewhite;
+        border-width: 3px;
+        border-style: solid;
+    }
+    fieldset>legend{
+        color:blueviolet;
+    }
+    p>label {
+        display:block;
+    }
+    input{
+        border-radius: 7px;
+    }
+    input[type="email"],
+     input[type="tel"],
+     textarea {
+        border-radius: 7px;
+    }
+    /* styles on validity */
+    input:valid{
+        border-color:red;
+    }
+    input:invalid{
+        border-radius:yellow;
+    }
+    /* styles for when somebody goes to invalid field to fix it */
+     input:focus:invalid{
+         border-color:cyan;
+     }
+     /* styles for reuired inputs */
+     input:required,
+     textarea:required{
+        border-style:dashed;
+     }

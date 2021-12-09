@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="icon" type="images/png" href="images/logo.jpeg.jpeg"/>
+    <title>flavours</title>
+</head>
+<body>
+    <style type="text/css">
+        body{
+            background-image:url("images/yy.jpg");
+            background-size:auto;
+            background-attachment:fixed;
+        }
+    </style>
+    <header>
+        <nav class="pass">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="/">Flavours</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="About us.html">About us</a></li>
+            </ul>
+        </nav>
+            </header>
+            <aside>  
+                <img src="images/logo.jpg" class="logo" length ="250" width="200"alt="Cupcake logo"/>
+                   <h1>Blessing's Cupcakes</h1>
+                </aside>
+
+            <main id ="Main">
+                <h1>Contact Us</h1>
+                
+    <form action="contact.html" method="POST" enctype="application/x-www-form-urlencoded">
+        <!-- using fieldset -->
+        <fieldset class="fieldset">
+            <!-- for the title of the fieldset -->
+            <legend> Contact information</legend>
+            <!--  add * sign to show required info -->
+        Your name:  <input type="text" required minlength="1" maxlength="20" name="customename">* <br/>
+     <br />Your email: <input type="email" name="CustomeEmail"><br/>
+      <br/> Your Phone: <input type="tel" min="1" max="10" name="phonetype"><br />
+                   <!-- to specify the phone to use (radio buttons) -->
+                 <input type="radio" vame="cell" value="cell">cell
+                 <input type="radio" vame="work" value="work">work
+                 <input type="radio" vame="home" value="home">home
+          <br/>
+          <br/>
+         Ok to contact me:
+                   <input type="checkbox" name="ok to contact" value="Phone">by phone 
+                   <input type="checkbox" name="ok to contact" value="email"> by email 
+                  <br/>
+                   <input type="hidden" name="Source" value="Contact">
+                <br/>
+            </fieldset><br/>
+            <fieldset class="fieldset">
+                <legend>Feedback</legend>
+       Your Feedback:   <br /> <textarea required tabindex="1" name="feedbackText" col="40" rows="3"></textarea><br/>
+        Severity: <input type="range" min="1" max="10" name="Severityrange"><br/>
+         Severity: <input type="Number" min="1" max="10" name="Severity"><br/>
+         Issue date: <input type="date" name="issuedate"><br/>
+     Issue time:<input type="time" name="issuetime"><br/>
+                
+                
+
+        Feedback type: <select name="feedbackType" multiple="multiple"> 
+                    <option value="webstore">Webstore</option>
+                    <option value="store">Physical store</option>
+
+                    <option value="webtech">Webtech</option>
+                    <option value="general">General Feedback</option>
+                    </select><br/>
+     </fieldset>
+     <br/>
+            <input type="submit" value="SendContact">
+                </form>
+            </main>
+            <footer>
+                <nav div="pass">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/">Flavour</a></li>
+                        <li><a href="Order.html">Order</a></li>
+                        <li><a href="About us.html">About us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </footer>
+            <footer>
+                <p>Our address is<address>Bethany's Pie Shop - Baker Street 555 Brussels Belgit</address>
+                    </p>
+                    <p><small>&copy;2020 Blessing's Cupcake - All rights reserved</small></p>
+                    <p>Contact us via <a href="mailto:jaelweru5@gmail.com">email</a></p>
+                    <p><small><a href="https://app.pluralsight.com/course-player?clipId=334e6ba6-947d-4c08-9732-0f964128bd66">Created by Pluralsight</a></small></p>
+            </footer>
+</body>
+</html>s

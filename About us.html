@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.17/mediaelementplayer.min.css"/>
+    <link rel="icon" type="images/png" href="images/logo.jpeg.jpeg"/>
+    <title>flavours</title>
+    <!-- shim for media... 
+         helps expand support for browser that don't support html5...
+        this allows browser to support html5  // for video and audio element-->
+    <script src="http://api.html5media.info/1.1.8/html5media.min.js"></script>
+</head>
+<body>
+    <style type="text/css">
+        body{
+            background-image:url("images/yy.jpg");
+            background-size:auto;
+            background-attachment:fixed;
+        }
+        /* styles for video */
+        #main video{
+            width:100%;
+        }
+        #main audio{
+            width:100%;
+        }
+    </style>
+    <header>
+        <nav class="pass">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="Cupcakes Menu.html">Flavours</a></li>
+                <li><a href="Order.html">Order</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="/">About us</a></li>
+            </ul>
+        </nav>
+            </header>
+            <aside>  
+               <img src="images/logo.jpg" class="logo" length ="250" width="200"alt="Cupcake logo"/>
+                   <h1>Blessing's Cupcakes</h1>
+                   <nav div="sidenav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="Cupcakes Menu.html">Flavour</a></li>
+                        <li><a href="Order.html">Order</a></li>
+                        <li><a href="/">About us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="feedback">        
+                    <h3><strong>Testiomials</strong></h3>
+                           <p>
+                              <blockquote><strong>Best cupcake i have ever tasted!</strong></blockquote> 
+                                   <cite>Denise ,&lt;,Nairobi,muthaiga&gt;</cite>
+                           </p>
+                           <p>
+                               <blockquote><strong>Favourite Go-to cupcake shop</strong></blockquote>
+                                   <cite>Ashley &lt;,Meru,Nkubu&gt;</cite>
+                           </p>
+                           
+                           <p>
+                               <blockquote><strong>Yeey!You guys can never dissapoint!</strong>
+                               <br><strong>Your cupcakes are moist and fluffy</strong><br></blockquote> 
+                               <cite>Namanga &lt;Kiambu,Juja </cite>
+                           </p>
+                           <p>
+                               <blockquote><strong>I love your caramel cupcakes</strong></blockquote>
+                               <cite>Najma &lt;Kiambu,Roysambu&gt;</cite>
+                           </p>
+                       
+                            </div>    
+                 
+                 
+                </aside>
+            <main>
+                <p>In the video below, you can see how we decorate mini-cupcakes</p>
+                 <!--how to use video/audio in html/css and js  -->
+                  <video id="theVideo" width="560" height="315" controls autolay loop>
+                     <source src="images/desktop.ini" type="video/ini ">
+                      add cc (captions to video) -->
+                      <track label="English" kind="subtitles" src="media/baking.vtt" 
+                              srclang="en" deafault/>
+                      <track label="Spanish" kind="subtitles" src="media/baking-es.vtt" 
+                              srclang="es"/>
+                    Your browser doesn't support video
+                </video>  
+
+                   <div>
+                         <button id="playButton">play</button>
+                         <button id="pauseButton">pause</button>
+                         <button id="stopButton">stop</button>
+                
+                     </div>
+
+                     <div>
+                        currentPosition: <span id="timeDisplay"></span>
+                     </div>
+
+                <!-- use video hosted in another place like youtube/vimeo -->
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/kATpEEFhgEI" title="YouTube video player" 
+                        frameborder="0"
+                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                              allowfullscreen></iframe> -->
+                
+
+                 <audio src="media/Ndlovu Youth Choir-mc (1)..mp3" contols > 
+                     <!-- add media format -->
+                     <source src="media/Ndlovu Youth Choir-mc (1)..wav" type="audio/wav"/>
+                    <source src="media/Ndlovu Youth Choir-mc (1)..mp3" type="audio/mp3"/>
+                    Your browser doesn't support audio
+                </audio>
+
+            </main>
+            <footer>
+                <p>Our address is<address>Bethany's Pie Shop - Baker Street 555 Brussels Belgit</address>
+                    </p>
+                    <p><small>&copy;2020 Blessing's Cupcake - All rights reserved</small></p>
+                    <p>Contact us via <a href="mailto:jaelweru5@gmail.com">email</a></p>
+                    <p><small><a href="https://app.pluralsight.com/course-player?clipId=334e6ba6-947d-4c08-9732-0f964128bd66">Created by Pluralsight</a></small></p>
+            </footer>
+</body>
+<!-- add url from media element.js libraries both js and css(for css is kept at the top) -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mediaelement/4.2.17/mediaelementplayer.min.css"></script>
+<script type="text/javascript">
+// 
+document.addEventlistener("DOMContentLoaded",function(){
+ let playbutton = document.getElementById("playButton");
+ let pauseButton = document.getElementById("pauseButton");
+ let stopButton = document.getElementById("stopButton");
+ let theVideo = document.getElementById("thevideo");
+
+ // alows video to reset to the beginning after it ends
+ theVideo.addEventlisteners("ended" , function(){
+     theVideo.currentTime = 0;
+ });
+ // allows video to tell viewer the time of the video while watching
+//  math.floor shows time correctly in seconds
+theVideo.addEventlisteners("timeupdate", function(){
+    timeDisplay.innertext= Math.foor(theVideo.currentTime);
+});
+ //  react to sb clicking on it
+playButton.addEventListener("Click",function (){
+    // play the video
+    theVideo.play();
+});
+pauseButton.addEventListener("Click",function (){
+    // pause the video
+    theVideo.pause();
+});
+stopButton.addEventListener("Click",function (){
+    // stop the video
+    theVideo.pause();
+    theVideo.currentTime=0;
+});
+});
+
+    </script>
+</html>
